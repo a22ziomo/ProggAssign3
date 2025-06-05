@@ -132,6 +132,8 @@ GameObject:
   m_Component:
   - component: {fileID: 447532424}
   - component: {fileID: 447532423}
+  - component: {fileID: 447532426}
+  - component: {fileID: 447532425}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -151,17 +153,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa10f32490464cf1a7093f94d64b1c2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Size: {x: 5, y: 5}
+  Size: {x: 6, y: 6}
   TilePrefab: {fileID: 7658168712561604486, guid: f972c891b58a32040ab18ecb6f770b2f, type: 3}
   PropertyNames:
-  - Solid
-  - Water
+  - Blocked
+  - Hinder
+  - Portal
+  - Goal
   _cellData:
   - Properties: 0
     JsonData: 
   - Properties: 0
     JsonData: 
+  - Properties: 2
+    JsonData: 
   - Properties: 0
+    JsonData: 
+  - Properties: 0
+    JsonData: 
+  - Properties: 0
+    JsonData: 
+  - Properties: 1
+    JsonData: 
+  - Properties: 1
+    JsonData: 
+  - Properties: 1
     JsonData: 
   - Properties: 0
     JsonData: 
@@ -186,6 +202,42 @@ MonoBehaviour:
   - Properties: 0
     JsonData: 
   - Properties: 0
+    JsonData: 
+  - Properties: 0
+    JsonData: 
+  - Properties: 0
+    JsonData: 
+  - Properties: 0
+    JsonData: 
+  - Properties: 0
+    JsonData: 
+  - Properties: 0
+    JsonData: 
+  - Properties: 0
+    JsonData: 
+  - Properties: 0
+    JsonData: 
+  - Properties: 8
+    JsonData: 
+  - Properties: 0
+    JsonData: 
+  - Properties: 0
+    JsonData: 
+  - Properties: 0
+    JsonData: 
+  - Properties: 0
+    JsonData: 
+  - Properties: 0
+    JsonData: 
+  - Properties: 0
+    JsonData: 
+  - Properties: 0
+    JsonData: 
+  - Properties: 0
+    JsonData: 
+  - Properties: 0
+    JsonData: 
+  - Properties: 8
     JsonData: 
   - Properties: 0
     JsonData: 
@@ -223,6 +275,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &447532425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447532422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a705376b1fd7c0643b793d7c98cd5833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExtraMoveCost: 23
+  startPosition: {x: 0, y: 0}
+  maximumSteps: 50
+  goals:
+  - {x: 4, y: 4}
+  portalen: []
+--- !u!114 &447532426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447532422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d27c72da2cd454c973e83cb185a8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0.1
+  tipHeight: 0.2
+  layer: 0
+  camera: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

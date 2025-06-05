@@ -77,3 +77,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df8a3a9d028f7914a8d126fb372e6b45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: {fileID: 3318548502735251896}
+  G: 0
+  H: 0
+  Parent: {x: 0, y: 0}
+  PortalExitCoord: {x: 0, y: 0}
