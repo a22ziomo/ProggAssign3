@@ -2,9 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Grid;
+using TMPro;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
-
+[ExecuteAlways]
 [RequireComponent(typeof(GridTile))]
 public class Piece : MonoBehaviour
 {
@@ -14,10 +17,52 @@ public class Piece : MonoBehaviour
     public int F => G + H;
     public Vector2 Parent;
     public Vector2Int PortalExitCoord;
-    
+
+    private Material material;
+    private TextMeshPro textMesh;
+    private int maxSteps;
+
+    private void Start()
+    {
+        MeshRenderer renderer = GetComponent<MeshRenderer>();
+        
+        material = Instantiate(renderer.material);
+        renderer.sharedMaterial = material;
+        maxSteps = GetComponentInParent<Findpather>().maximumSteps;
+        textMesh = gameObject.GetComponentInChildren<TextMeshPro>();
+    }
+
+    private void Update()
+    {
+        var tile = GetComponent<GridTile>();
+        if (tile.GetProperty(TileProperty.Blocked))
+        {
+            material.color = Color.red;
+        }
+        else if (state.GetProperty(TileProperty.Hinder))
+        {
+            material.color = Color.yellow;
+        }
+        else
+        {
+            material.color = Color.green;
+        }
+
+        if (maxSteps >= G && G > 0)
+        {
+            textMesh.text = G.ToString();
+        }
+        else
+        {
+            textMesh.text = " ";
+        }
+        
+    }
+
     private void OnDrawGizmos()
     {
         var tile = GetComponent<GridTile>();
+        /*
         if (tile.GetProperty(TileProperty.Blocked))
         {
             Gizmos.color = Color.red;
@@ -31,7 +76,8 @@ public class Piece : MonoBehaviour
             Gizmos.color = Color.green;
         }
         Gizmos.DrawCube(transform.position, new Vector3(1, 0.1f, 1));
-
+        */
+        
 
         if (tile.GetProperty(TileProperty.Portal))
         {
@@ -45,7 +91,7 @@ public class Piece : MonoBehaviour
         if (tile.GetProperty(TileProperty.Goal))
         {
             Gizmos.color = Color.white;
-            Gizmos.DrawSphere(transform.position+new Vector3(0,0.5f,0), 0.25f);
+            Gizmos.DrawSphere(transform.position+new Vector3(0,1.5f,0), 0.25f);
             
             
         }

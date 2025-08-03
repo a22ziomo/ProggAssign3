@@ -72,8 +72,8 @@ public class Findpather : MonoBehaviour
                     {
                         if (!((int)path[i].x == (int)goal.x && (int)path[i].y == (int)goal.y))
                         {
-                            Vector3 from = new Vector3(path[i].x, 0.1f, path[i].y);
-                            Vector3 to = new Vector3(path[i + 1].x, 0.1f, path[i + 1].y);
+                            Vector3 from = new Vector3(path[i].x, 1.1f, path[i].y);
+                            Vector3 to = new Vector3(path[i + 1].x, 1.1f, path[i + 1].y);
                             vectors.Draw(from,to,Color.grey);
                         }
                     }
