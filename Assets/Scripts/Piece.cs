@@ -12,6 +12,7 @@ using UnityEngine.UI;
 public class Piece : MonoBehaviour
 {
     public GridTile state;
+    public int extraMoveCost = 0;
     public int G;
     public int H;
     public int F => G + H;
@@ -26,7 +27,7 @@ public class Piece : MonoBehaviour
     {
         MeshRenderer renderer = GetComponent<MeshRenderer>();
         
-        material = Instantiate(renderer.material);
+        material = Instantiate(renderer.sharedMaterial);
         renderer.sharedMaterial = material;
         maxSteps = GetComponentInParent<Findpather>().maximumSteps;
         textMesh = gameObject.GetComponentInChildren<TextMeshPro>();
@@ -50,6 +51,7 @@ public class Piece : MonoBehaviour
 
         if (maxSteps >= G && G > 0)
         {
+
             textMesh.text = G.ToString();
         }
         else

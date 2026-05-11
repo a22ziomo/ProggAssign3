@@ -160,13 +160,13 @@ MonoBehaviour:
   _cellData:
   - Properties: 0
     JsonData: 
-  - Properties: 0
+  - Properties: 4
     JsonData: 
   - Properties: 2
     JsonData: 
   - Properties: 0
     JsonData: 
-  - Properties: 4
+  - Properties: 0
     JsonData: 
   - Properties: 0
     JsonData: 
@@ -186,7 +186,7 @@ MonoBehaviour:
     JsonData: 
   - Properties: 0
     JsonData: 
-  - Properties: 0
+  - Properties: 2
     JsonData: 
   - Properties: 0
     JsonData: 
@@ -212,23 +212,23 @@ MonoBehaviour:
     JsonData: 
   - Properties: 0
     JsonData: 
+  - Properties: 0
+    JsonData: 
+  - Properties: 1
+    JsonData: 
+  - Properties: 0
+    JsonData: 
+  - Properties: 0
+    JsonData: 
+  - Properties: 0
+    JsonData: 
   - Properties: 8
     JsonData: 
-  - Properties: 1
-    JsonData: 
-  - Properties: 0
-    JsonData: 
-  - Properties: 0
-    JsonData: 
-  - Properties: 0
-    JsonData: 
-  - Properties: 0
-    JsonData: 
   - Properties: 0
     JsonData: 
   - Properties: 1
     JsonData: 
-  - Properties: 4
+  - Properties: 0
     JsonData: 
   - Properties: 0
     JsonData: 
@@ -284,14 +284,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a705376b1fd7c0643b793d7c98cd5833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExtraMoveCost: 2
-  startPosition: {x: 0, y: 0}
-  maximumSteps: 50
+  startPosition: {x: 1, y: 2}
+  maximumSteps: 2
   goals:
-  - {x: 3, y: 4}
+  - {x: 2, y: 5}
   portalen:
-  - {x: 4, y: 0}
-  - {x: 5, y: 5}
+  - {x: 1, y: 0}
 --- !u!114 &447532426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,14 +331,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 2
     m_Resolution: -1

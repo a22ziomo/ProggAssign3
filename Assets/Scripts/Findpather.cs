@@ -13,7 +13,7 @@ using Color = UnityEngine.Color;
 
 public class Findpather : MonoBehaviour
 {
-    [SerializeField] private int ExtraMoveCost;
+   
     [SerializeField] private Vector2 startPosition;
     [SerializeField] public int maximumSteps;
     private Vector2 size;
@@ -105,7 +105,7 @@ public class Findpather : MonoBehaviour
                     int tempG = Tiles[current].G + 1;
                     if (tile.state.GetProperty(TileProperty.Hinder))
                     {
-                        tempG += ExtraMoveCost;
+                        tempG += tile.extraMoveCost;
                     }
 
                     if (closedList.Contains(neighbour))
@@ -165,7 +165,7 @@ public class Findpather : MonoBehaviour
                 int tempG = Tiles[current_].G + 1;
                 if (tile.state.GetProperty(TileProperty.Hinder))
                 {
-                    tempG += ExtraMoveCost;
+                    tempG += tile.extraMoveCost;
                 }
 
                 if (!openList.Contains(neighbour))
